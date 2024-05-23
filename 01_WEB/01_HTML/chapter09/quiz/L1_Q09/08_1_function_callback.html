@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 페이지 8-1
+        function callbacktenTimes(callback){
+            for(let i = 0; i < 10; i++ ){
+                callback();
+            }
+        };
+
+        const consoleFunc = function () {
+            console.log('함수 호출');
+        };
+
+        callbacktenTimes(consoleFunc);
+
+        callbacktenTimes(function () {console.log('콜백!!');});
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
