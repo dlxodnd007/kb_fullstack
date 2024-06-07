@@ -1,0 +1,29 @@
+{
+  "todos": [
+    {
+      "id": "2ca6",
+      "todo": "뉴진스 보기",
+      "done": false
+    },
+    {
+      "id": "d180",
+      "todo": "페이커 찬양하기",
+      "done": false
+    },
+    {
+      "id": "9edd",
+      "todo": "졸령",
+      "done": false
+    }
+  ],
+  "users": [
+    {
+      "id": "12",
+      "password": "12"
+    },
+    {
+      "id": "xenosign",
+      "password": "1234"
+    }
+  ]
+}
