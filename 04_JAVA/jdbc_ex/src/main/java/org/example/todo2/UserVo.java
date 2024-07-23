@@ -1,4 +1,4 @@
-package org.examle.todo2;
+package org.example.todo2;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
