@@ -1,4 +1,4 @@
-package org.example.controller.todo;
+package org.example.controller.todo.v1;
 
 import lombok.extern.slf4j.Slf4j;
 import org.example.dto.todo.TodoDtoListV1;
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @Controller
 @Slf4j
-public class TodoFormControllerV2 {
+public class TodoFormControllerV1 {
     private TodoDtoListV1 todoList = TodoDtoListV1.getInstance();
 
     @GetMapping("/todo/form")

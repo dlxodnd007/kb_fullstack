@@ -1,6 +1,5 @@
 package org.example.dto.todo;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
