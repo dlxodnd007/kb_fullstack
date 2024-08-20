@@ -18,7 +18,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @ComponentScan(basePackages = "org.example")
-@MapperScan(basePackages = {"org.example.mapper"})
+@MapperScan(basePackages = {"org.example.mapper", "org.example.repository"})
 public class RootConfig {
 
     @Value("${jdbc.driver}")
