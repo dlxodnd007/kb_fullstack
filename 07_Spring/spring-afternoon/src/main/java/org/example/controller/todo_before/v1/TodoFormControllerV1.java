@@ -1,4 +1,4 @@
-package org.example.controller.todo.v1;
+package org.example.controller.todo_before.v1;
 
 import lombok.extern.slf4j.Slf4j;
 import org.example.dto.todo.TodoDtoListV1;
@@ -10,15 +10,13 @@ import javax.servlet.http.HttpServletResponse;
 
 @Controller
 @Slf4j
-public class TodoShowControllerV1 {
+public class TodoFormControllerV1 {
     private TodoDtoListV1 todoList = TodoDtoListV1.getInstance();
 
-    @GetMapping("/todo/show")
+    @GetMapping("/todo/form")
     public String process(HttpServletRequest request, HttpServletResponse response) {
-        log.info("==========> TODO 리스트 보기 페이지 호출, /todo/show");
+        log.info("==========>  Tdo 추가 페이지 호출, /todo/form");
 
-        request.setAttribute("todoList", todoList.getList());
-
-        return "todo-show";
+        return "todo-form";
     }
 }

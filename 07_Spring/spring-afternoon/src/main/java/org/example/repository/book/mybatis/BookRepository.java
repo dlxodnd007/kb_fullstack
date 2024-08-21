@@ -1,6 +1,6 @@
 package org.example.repository.book.mybatis;
 
-import org.example.domain.BookMybatis;
+import org.example.domain.book.BookMybatis;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
