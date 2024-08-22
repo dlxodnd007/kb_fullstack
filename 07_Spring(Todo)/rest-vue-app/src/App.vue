@@ -1,27 +1,44 @@
 <template>
-  <div class="board-container">
-    <Todo />
+  <div class="app-container">
+    <Header @change-component="changeComponent" />
+    <div class="board-container">
+      <Todo v-if="currentComponent === 'todo'" />
+      <Weather v-if="currentComponent === 'weather'" />
+      <Forecast v-if="currentComponent === 'forecast'" />
+    </div>
   </div>
 </template>
 
 <script setup>
-import OnClickBoard from './components/OnClickBoard.vue';
-import OnMountedBoard from './components/OnMountedBoard.vue';
+import { ref } from 'vue';
+import Header from './components/Header.vue';
 import Todo from './components/Todo.vue';
+import Weather from './components/Weather.vue';
+import Forecast from './components/Forecast.vue';
+
+const currentComponent = ref('todo');
+
+const changeComponent = (component) => {
+  currentComponent.value = component;
+};
 </script>
 
 <style scoped>
+.app-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .board-container {
   display: flex;
-  justify-content: center; /* 두 보드를 양옆에 배치 */
-  align-items: flex-start; /* 보드들을 수직 상단 정렬 */
+  justify-content: center;
+  align-items: flex-start;
   background-color: #333;
-  height: 80vh;
 }
 
 .board-container > * {
-  flex: 1; /* 각 보드가 동일한 너비를 차지하게 설정 */
+  flex: 1;
   margin: 10px;
-  max-width: 700px; /* 각 보드의 최대 너비를 50%로 제한 */
+  max-width: 700px;
 }
 </style>
