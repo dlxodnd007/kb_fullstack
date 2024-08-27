@@ -1,4 +1,4 @@
-package org.example.controller;
+package org.example.controller.user;
 
 import lombok.RequiredArgsConstructor;
 import org.example.domain.User;
